@@ -1,0 +1,11 @@
+S -> NP VP  
+NP -> Det N | "John"  
+VP -> V NP | V  
+Det -> "a" | "the"  
+N -> "cat" | "dog"  
+V -> "chased" | "barked"  
+
+
+S -> A "x"
+A -> B "y" | "z"
+B -> S "w" | "u"

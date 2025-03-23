@@ -1,0 +1,8 @@
+Stmt    -> "if" "(" Cond ")" "{" StmtList "}" Stmt' | "id" "=" Expr ";"
+Stmt'   -> "else" "{" StmtList "}" | ε
+StmtList -> Stmt StmtList | ε
+Cond    -> "id" RelOp "id"
+RelOp   -> "<" | "==" | ">"
+Expr    -> Term Expr'
+Expr'   -> "+" Term Expr' | ε
+Term    -> "id" | "num"
